@@ -1,0 +1,267 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
+.container
+{
+    width:100%;
+    display:inline-block;
+}
+.header
+{
+}
+    .uno
+    {
+    display:inline-block;
+    width:80%;
+    text-align:left;
+    text-align:center;
+    }
+        .uno img
+        {
+            width:65%;
+            text-align:center;
+            display:inline-block;
+            margin-top:10px;
+        }
+    .der
+    {  
+        margin:0 auto;
+        width:80%;
+    }
+        .der ul
+        {
+            text-align:center;
+            margin:0px;
+        }
+            .der ul li
+            {
+                display:inline-block;
+                width:100px;
+                height:90px; 
+                margin-top:10px;
+                margin-left:20px;
+                border-radius:10px;   
+                box-shadow:10px 10px 25px #000; 
+                background:#052944;
+                opacity:0.8;
+            }
+                .der ul li a
+                {
+                    display:block;
+                    margin-left:8px;
+                    margin-top:40px;
+                    margin-right:10px;
+                    text-decoration:none;
+                    color:#ffffff; 
+                }
+.cuerpo
+{
+    background:#b7eae9;
+    width:100%;
+    text-align:center;
+    margin:0px;
+    display:inline-block;
+    background:#b7eae9;
+}
+        .h6
+        {
+            width:80%;
+            text-align:center;
+            display:inline-block;
+            color:#ffffff;
+            background:#052944;
+            margin-bottom:10px;        
+        }
+.header fother
+{
+    background:#1e1c1c;
+    width:100%;
+    margin:0px;
+    text-align:center;
+    display:inline-block;
+}
+.comentarios
+{
+    width:100%;
+    text-align:center;
+    margin:0px;
+    background:#1e1c1c;
+    
+
+}
+.comentarios img
+{
+    width:100%;
+    text-align:center;
+    color:#ffffff;
+    box-shadow:10px 10px 10px 20px #000;
+}
+@media only screen and (max-width: 479px)
+{
+    .der
+    {
+        
+        margin:0 auto;
+        width:80%;
+    }
+        .der ul
+        {
+            text-align:center;
+            margin:0px;
+        }
+            .der ul li
+            {
+                background:#052944;
+                display:inline-block;
+                width:100px;
+                height:90px; 
+                margin-top:10px;
+                margin-left:20px;
+                border-radius:10px;   
+                box-shadow:10px 10px 25px #000;           
+            }
+                .der ul li a
+                {
+                    margin-top:70px;
+                }
+        .der ul .a
+        {
+            background:#052944 url("../images/Menu/Informacion.png")top center no-repeat;
+        }
+        .der ul .b
+        {
+            background:#052944 url("../images/Menu/Contactenos.png")top center no-repeat;
+        }
+        .der ul .c
+        {
+            background: #052944 url("../images/Menu/Promocion.png")top center no-repeat;
+        }
+        .der ul .d
+        {
+            background:#052944 url("../images/Menu/Habitacion.png")top center no-repeat;
+        }
+        .der ul .e
+        {
+            background:#052944 url("../images/Menu/Servicio.png")top center no-repeat;
+        }
+        .der ul .f
+        {
+            background:#052944 url("../images/Menu/politica.png")top center no-repeat;
+        }
+}
+.float-left
+{
+    width:70%;
+}
+.site-title img
+{
+    width:100%;
+    text-align:center;
+    display:inline-block;
+}
+.registro
+{
+    border:1px solid #052944;
+}
+
+div.slideshow
+{
+    max-width:800px;
+    margin:0 auto;
+    padding:10px;
+    box-shadow:0px 0px 10px #000;
+    border:1px solid #000;
+}
+div.mask
+{
+    overflow:hidden;
+}
+    div.slideshow div img
+    {
+        z-index:-10;
+        margin-left:0px;
+    }
+ul.items
+{
+    float:left;
+    margin-top:-300px;
+    z-index:10;
+    margin-left:0px;
+}
+    ul.items li
+    {
+        list-style:none;
+        margin-left:100px;
+        width:620px;
+        background:#ffffff;
+        float:left;
+        min-height:200px;
+        opacity:0.4;
+        text-align:center;
+    }
+.items li div h1
+{
+    margin-top:50px;
+    text-align:center;
+    color:#0094ff;
+    font:100px large;
+}
+.slideshow
+{
+    background:#ffffff;  
+}

@@ -1,0 +1,30 @@
+﻿@model Hotel.Models.Habitacion
+@{
+    ViewBag.Title = "RegistrarCli";
+}
+
+<div>
+    <ul>
+        <li>@Html.ActionLink("Registrar Persona", "RegistrarPer", "Persona")</li>
+    </ul>
+    <ul>
+        <li>@Html.ActionLink("Registrar Agencia", "RegistrarAg", "Agencia")</li>
+    </ul>
+    <ul>
+        <li>@Html.ActionLink("Registrar Empresa", "RegistrarEmp", "Empresa")</li>
+    </ul>
+</div>
+
+<fieldset>
+    <legend>
+         Registrar Persona
+    </legend>
+    <table>
+            @using(Html.BeginForm())
+            {   
+                <tr>
+                    <td>@Html.TextBoxFor(a=>a.Id)</td>
+                </tr>                                                                     
+            }
+    </table>
+</fieldset>

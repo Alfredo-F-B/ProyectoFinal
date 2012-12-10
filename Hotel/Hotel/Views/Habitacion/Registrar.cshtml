@@ -1,0 +1,53 @@
+﻿@model Hotel.Models.Habitacion
+
+@{
+    ViewBag.Title = "Registrar";
+}
+
+<h2>Registrar Habitacion</h2>
+<fieldset class="letras">
+    <legend>
+         Registrar Habitacion
+    </legend>
+    <table>
+            @using(Html.BeginForm())
+            { 
+                <tr>
+                    <td>Numero de Habitacion</td><td>@Html.TextBoxFor(a => a.Numero)</td>
+                </tr>
+                <tr>
+                    <td>Categoria</td><td>@Html.TextBoxFor(a => a.Categoria)</td>
+                </tr>
+                <tr>
+                    <td>Estado</td><td>@Html.TextBoxFor(a => a.Estado)</td>
+                </tr>
+                <tr>
+                    <td>Descripcion</td><td>@Html.TextBoxFor(a => a.Descripcion)</td>
+                </tr>
+                <tr>
+                    <td>Piso</td><td>@Html.TextBoxFor(a => a.Piso)</td>
+                </tr>   
+                <tr>
+                    <td>Precio</td><td>@Html.TextBoxFor(a => a.Precio)</td><td>Bs</td>
+                </tr> 
+                <tr>
+                    <td>Tipo de Pago</td><td>@Html.TextBoxFor(a => a.TipoPago)</td>
+                </tr>      
+                <tr>
+                    <td>TvCable</td><td>@Html.TextBoxFor(a => a.TvCable)</td>
+                </tr>
+                <tr>
+                    <td>Baño</td><td>@Html.TextBoxFor(a => a.Baño)</td>
+                </tr>
+                <tr>
+                    <td>Aire Acondicionador</td><td>@Html.TextBoxFor(a => a.Acondicionador)</td>
+                </tr>
+                <tr>
+                    <td>Calefaccion</td><td>@Html.TextBoxFor(a => a.Calefaccion)</td>
+                </tr>	 
+                <tr>
+                       <td><input type="submit" value="enviar" /> </td>
+                </tr>                                                                        
+            }
+    </table>
+</fieldset>

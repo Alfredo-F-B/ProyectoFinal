@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Hotel2012" Class="conectorDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(local);Initial Catalog=Hotel2012;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Hotel2012ConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Administrador" Member="Administrador">
+    <Type Name="Administrador">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CI" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="ApPaterno" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="ApMaterno" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Sexo" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Nacionalidad" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="Celular" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Usuario_Administrador" Member="Usuario" ThisKey="IdUsuario" OtherKey="Id" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClienteAgencia" Member="ClienteAgencia">
+    <Type Name="ClienteAgencia">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="NIT" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="ciudad" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="pais" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="contacto" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="Usuario_ClienteAgencia" Member="Usuario" ThisKey="IdUsuario" OtherKey="Id" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClienteEmpresa" Member="ClienteEmpresa">
+    <Type Name="ClienteEmpresa">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="NIT" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Ciudad" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Pais" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Contacto" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="Usuario_ClienteEmpresa" Member="Usuario" ThisKey="IdUsuario" OtherKey="Id" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientePersona" Member="ClientePersona">
+    <Type Name="ClientePersona">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CI" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ApPaterno" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="ApMaterno" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Pasaporte" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="categoria" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="Celular" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Ciudad" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Pais" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Comentarios" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Cumpleanos" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Usuario_ClientePersona" Member="Usuario" ThisKey="IdUsuario" OtherKey="Id" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Empleado" Member="Empleado">
+    <Type Name="Empleado">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CI" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="ApPaterno" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="ApMaterno" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Sexo" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Nacionalidad" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="Celular" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Empleado_Mantenimiento" Member="Mantenimiento" ThisKey="Id" OtherKey="IdEmpleado" Type="Mantenimiento" />
+      <Association Name="Usuario_Empleado" Member="Usuario" ThisKey="IdUsuario" OtherKey="Id" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Factura" Member="Factura">
+    <Type Name="Factura">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdHabitacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdServicio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RUT" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ciudad" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="Descuento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModoPago" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioTotal" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="Habitacion_Factura" Member="Habitacion" ThisKey="IdHabitacion" OtherKey="Id" Type="Habitacion" IsForeignKey="true" />
+      <Association Name="Servicio_Factura" Member="Servicio" ThisKey="IdServicio" OtherKey="Id" Type="Servicio" IsForeignKey="true" />
+      <Association Name="Usuario_Factura" Member="Usuario" ThisKey="IdUsuario" OtherKey="Id" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Habitacion" Member="Habitacion">
+    <Type Name="Habitacion">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Numero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Categoria" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Piso" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Precio" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPago" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TvCable" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Baño" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Acondicionador" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Calefaccion" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Habitacion_Factura" Member="Factura" ThisKey="Id" OtherKey="IdHabitacion" Type="Factura" />
+      <Association Name="Habitacion_Mantenimiento" Member="Mantenimiento" ThisKey="Id" OtherKey="IdHabitacion" Type="Mantenimiento" />
+      <Association Name="Habitacion_Reserva" Member="Reserva" ThisKey="Id" OtherKey="IdHabitacion" Type="Reserva" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mantenimiento" Member="Mantenimiento">
+    <Type Name="Mantenimiento">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdEmpleado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdHabitacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="Inicio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Fin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Material" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Costo" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Decripcion" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Association Name="Empleado_Mantenimiento" Member="Empleado" ThisKey="IdEmpleado" OtherKey="Id" Type="Empleado" IsForeignKey="true" />
+      <Association Name="Habitacion_Mantenimiento" Member="Habitacion" ThisKey="IdHabitacion" OtherKey="Id" Type="Habitacion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reserva" Member="Reserva">
+    <Type Name="Reserva">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdHabitacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CantDias" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LLegada" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Salida" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPago" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="Habitacion_Reserva" Member="Habitacion" ThisKey="IdHabitacion" OtherKey="Id" Type="Habitacion" IsForeignKey="true" />
+      <Association Name="Usuario_Reserva" Member="Usuario" ThisKey="IdUsuario" OtherKey="Id" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Servicio" Member="Servicio">
+    <Type Name="Servicio">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Categoria" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Precio" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Servicio_Factura" Member="Factura" ThisKey="Id" OtherKey="IdServicio" Type="Factura" />
+      <Association Name="Servicio_ServicioUsuario" Member="ServicioUsuario" ThisKey="Id" OtherKey="IdServicio" Type="ServicioUsuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServicioUsuario" Member="ServicioUsuario">
+    <Type Name="ServicioUsuario">
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdServicio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Servicio_ServicioUsuario" Member="Servicio" ThisKey="IdServicio" OtherKey="Id" Type="Servicio" IsForeignKey="true" />
+      <Association Name="Usuario_ServicioUsuario" Member="Usuario" ThisKey="IdUsuario" OtherKey="Id" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuario" Member="Usuario">
+    <Type Name="Usuario">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nickname" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="Usuario_Administrador" Member="Administrador" ThisKey="Id" OtherKey="IdUsuario" Type="Administrador" />
+      <Association Name="Usuario_ClienteAgencia" Member="ClienteAgencia" ThisKey="Id" OtherKey="IdUsuario" Type="ClienteAgencia" />
+      <Association Name="Usuario_ClienteEmpresa" Member="ClienteEmpresa" ThisKey="Id" OtherKey="IdUsuario" Type="ClienteEmpresa" />
+      <Association Name="Usuario_ClientePersona" Member="ClientePersona" ThisKey="Id" OtherKey="IdUsuario" Type="ClientePersona" />
+      <Association Name="Usuario_Empleado" Member="Empleado" ThisKey="Id" OtherKey="IdUsuario" Type="Empleado" />
+      <Association Name="Usuario_Factura" Member="Factura" ThisKey="Id" OtherKey="IdUsuario" Type="Factura" />
+      <Association Name="Usuario_Reserva" Member="Reserva" ThisKey="Id" OtherKey="IdUsuario" Type="Reserva" />
+      <Association Name="Usuario_ServicioUsuario" Member="ServicioUsuario" ThisKey="Id" OtherKey="IdUsuario" Type="ServicioUsuario" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,29 @@
+﻿@model Hotel.Models.Servicio
+
+@{
+    ViewBag.Title = "Registrar";
+}
+
+<h2 class="cabeza">Registrar Servicio</h2>
+<fieldset class="letras">
+    <legend>
+         Registrar Servicio
+    </legend>
+    <table>
+            @using(Html.BeginForm())
+            { 
+                <tr>
+                        <td>Categoria</td><td>@Html.TextBoxFor(a => a.Categoria)</td>
+                </tr>
+                <tr>
+                        <td>Precio</td><td>@Html.TextBoxFor(a => a.Precio)</td>
+                </tr>
+                <tr>
+                        <td>Descripcion</td><td>@Html.TextBoxFor(a => a.Descripcion)</td>
+                </tr>
+                <tr>
+                       <td><input type="submit" value="enviar" /> </td>
+                </tr>                                                                        
+            }
+    </table>
+</fieldset>

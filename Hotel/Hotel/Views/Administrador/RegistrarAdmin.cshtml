@@ -1,0 +1,50 @@
+﻿@model Hotel.Models.Administrador
+
+@{
+    ViewBag.Title = "RegistrarAdmin";
+}
+
+<h2>Registrar Administrador</h2>
+<fieldset  class="letras">
+    <legend>
+         Registrar Administrador
+    </legend>
+    <table>
+            @using(Html.BeginForm())
+            { 
+                <tr>
+                    <td>CI</td><td>@Html.TextBoxFor(a => a.CI)</td>
+                </tr>
+                <tr>
+                    <td>Ap. Parterno</td><td>@Html.TextBoxFor(a => a.ApPaterno)</td>
+                </tr>
+                <tr>
+                    <td>AP. Materno</td><td>@Html.TextBoxFor(a => a.ApMaterno)</td>
+                </tr>
+                <tr>
+                    <td>Nombres</td><td>@Html.TextBoxFor(a => a.Nombres)</td>
+                </tr>
+                <tr>
+                    <td>Sexo</td><td>@Html.TextBoxFor(a => a.Sexo)</td>
+                </tr>
+                <tr>
+                    <td>Fecha De Nacimiento</td><td>@Html.TextBoxFor(a => a.FechaNacimiento)</td>
+                </tr>
+                <tr>
+                    <td>Nacionalidad</td><td>@Html.TextBoxFor(a => a.Nacionalidad)</td>
+                </tr>   
+                <tr>
+                    <td>Direccion</td><td>@Html.TextBoxFor(a => a.Direccion)</td><td>Bs</td>
+                </tr> 
+                <tr>
+                    <td>Telefono</td><td>@Html.TextBoxFor(a => a.Telefono)</td>
+                </tr>      
+                <tr>
+                    <td>Celular</td><td>@Html.TextBoxFor(a => a.Celular)</td>
+                </tr>	 
+                <tr>
+                       <td><input type="submit" value="enviar" /> </td>
+                </tr>                                                                        
+            }
+    </table>
+</fieldset>

@@ -1,0 +1,47 @@
+﻿@model Hotel.Models.ClienteEmpresa
+
+@{
+    ViewBag.Title = "RegistrarEmp";
+}
+
+<h2>Registrar Empresa</h2>
+<fieldset>
+    <legend>
+         Registrar Empresa
+    </legend>
+    <table>
+            @using(Html.BeginForm())
+            { 
+                <tr>
+                    <td>Nombre</td><td>@Html.TextBoxFor(a => a.Nombre)</td>
+                </tr>
+                <tr>
+                    <td>NIT</td><td>@Html.TextBoxFor(a => a.NIT)</td>
+                </tr>   
+                <tr>
+                    <td>Telefono</td><td>@Html.TextBoxFor(a => a.Telefono)</td><td>Bs</td>
+                </tr>     
+                <tr>
+                    <td>Email</td><td>@Html.TextBoxFor(a => a.Email)</td>
+                </tr>
+                <tr>
+                    <td>Direccion</td><td>@Html.TextBoxFor(a => a.Direccion)</td>
+                </tr>
+                <tr>
+                    <td>Ciudad</td><td>@Html.TextBoxFor(a => a.Ciudad)</td>
+                </tr>
+                <tr>
+                    <td>Estado</td><td>@Html.TextBoxFor(a => a.Estado)</td>
+                </tr>
+                <tr>
+                    <td>Pais</td><td>@Html.TextBoxFor(a => a.Pais)</td>
+                </tr>
+                <tr>
+                    <td>Contacto</td><td>@Html.TextBoxFor(a => a.Contacto)</td>
+                </tr>	 
+                <tr>
+                       <td><input type="submit" value="enviar" /> </td>
+                </tr>                                                                        
+            }
+    </table>
+</fieldset>

@@ -1,0 +1,42 @@
+﻿@model Hotel.Models.Reserva
+
+@{
+    ViewBag.Title = "Registrar";
+}
+
+<h2>Registrar</h2>
+
+
+<fieldset  class="letras">
+    <legend>
+         Registrar Reserva
+    </legend>
+    <table>
+            @using(Html.BeginForm())
+            { 
+                <tr>
+                    <td>Fotografia</td>
+                    <td>
+                        <form action="/Habitacion/Registrar" method="post" enctype="multipart/form-data">
+                            <input type="file" name="archivo" id="archivo" />
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                        <td>Cantidad de Dias</td><td>@Html.TextBoxFor(a => a.CantDias)</td>
+                </tr>   
+                <tr>
+                        <td>LLegada</td><td>@Html.TextBoxFor(a => a.LLegada)</td>
+                </tr> 
+                <tr>
+                        <td>Salida</td><td>@Html.TextBoxFor(a => a.Salida)</td>
+                </tr> 
+                <tr>
+                        <td>Tipo de Pago</td><td>@Html.TextBoxFor(a => a.TipoPago)</td>
+                </tr>
+                <tr>
+                       <td colspan="2"><input type="submit" value="enviar" /> </td>
+                </tr>                                                                        
+            }
+    </table>
+</fieldset>

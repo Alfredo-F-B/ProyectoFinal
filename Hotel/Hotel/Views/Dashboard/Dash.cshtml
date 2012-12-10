@@ -1,0 +1,105 @@
+﻿@model Hotel.Models.habit
+
+@{
+    ViewBag.Title = "Dash";
+}
+<table class="todo">
+    <tr>
+        <th colspan="7">
+            <b class="centro"><h1>DASBOARD</h1></b>
+        </th>
+
+    </tr>
+    <tr class="cabezal">
+        <th>Lunes</th>
+        <th>Libre</th>
+        <th>Reservado</th>
+        <th>Mantenimiento</th>
+        <th></th>
+        <th class="abc" id="abc"> @Html.ActionLink("« Anterior", "Anterior", "Dashboard")</th>
+        <th class="abc"> @Html.ActionLink("Semana Actual", "Dash", "Dashboard")</th>
+        <th class="abc" id="def"> @Html.ActionLink("Siguiente »", "Siguiente", "Dashboard")</th>
+    </tr>
+    <tr class="habitacion">
+        <th>
+            <b>Habitacion</b>
+        </th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miercoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+        <th>Sabado</th>
+        <th>Domingo</th>
+    </tr>
+    
+    <tr class="cabezal">
+        <td>
+            
+        </td>
+       @foreach (var f in ViewBag.fechas) 
+        {
+            <td>
+                @f
+            </td>
+        }
+    </tr>
+    @foreach (var item in ViewBag.info) 
+    {
+        int aux = 0;
+        int aux2 = 0;
+        int hola = 0;
+        <tr>
+            <td class="habitacion">
+                @item.numero
+            </td>
+            @if(@item.reservas.Count>0)
+            {
+                foreach(var rr in item.reservas)
+                {
+                    
+                    foreach(var ff in ViewBag.fechas)
+                    {
+                        aux++;
+                        
+                        if (rr.llegada == ff)
+                        {       
+                            hola=@rr.cantDias;
+                            <th colspan="@rr.cantDias"><div class="pintar"></div></th>
+                            continue; 
+                        }
+                        else
+                        {
+                             if(aux<8)
+                             {
+                                
+                                if((aux2+@hola)<aux)
+                                {
+                                    aux2++;
+                                    <th><div class="pintar2"></div></th>
+                                    continue;                       
+                                }                              
+                            }
+                        }
+                        
+                        
+                        
+
+                    }
+                    
+                }
+            }
+            else
+            {
+                <th colspan="1"><div class="pintar2"></div></th>
+                <th colspan="1"><div class="pintar2"></div></th>
+                <th colspan="1"><div class="pintar2"></div></th>
+                <th colspan="1"><div class="pintar2"></div></th>
+                <th colspan="1"><div class="pintar2"></div></th>
+                <th colspan="1"><div class="pintar2"></div></th>
+                <th colspan="1"><div class="pintar2"></div></th>
+                continue;
+            }
+        </tr>
+    }
+</table>

@@ -1,0 +1,74 @@
+﻿@model Hotel.Models.reserPersona
+
+@{
+    ViewBag.Title = "RegistrarPer";
+}
+
+<h2>Registrar Persona</h2>
+<fieldset class="letras">
+    <legend>
+         Registrar Persona
+    </legend>
+    <table>
+            @using(Html.BeginForm())
+            {   
+                <tr>
+                    <td>Tipo de Pago</td><td>@Html.TextBoxFor(a => a.tipopago)</td>
+                </tr>
+                <tr>
+                    <td>CI</td><td>@Html.TextBoxFor(a => a.ci)</td>
+                </tr>
+                <tr>
+                    <td>Ap. Paterno</td><td>@Html.TextBoxFor(a => a.apPaterno)</td>
+                </tr>
+                <tr>
+                    <td>Ap. Materno</td><td>@Html.TextBoxFor(a => a.apMaterno)</td>
+                </tr>
+                <tr>
+                    <td>Nombres</td><td>@Html.TextBoxFor(a => a.nombre)</td>
+                </tr>
+                <tr>
+                    <td>LLegada</td><td>@Html.TextBoxFor(a => a.llegada)</td>
+                </tr>
+                <tr>
+                    <td>Salida</td><td>@Html.TextBoxFor(a => a.salida)</td>
+                </tr>
+                <tr>
+                    <td>Pasaporte</td><td>@Html.TextBoxFor(a => a.pasaporte)</td>
+                </tr> 
+                <tr>
+                    <td>Categoria</td><td>@Html.TextBoxFor(a => a.categoria)</td>
+                </tr>  
+                <tr>
+                    <td>Telefono</td><td>@Html.TextBoxFor(a => a.telefono)</td><td>Bs</td>
+                </tr> 
+                <tr>
+                    <td>Celular</td><td>@Html.TextBoxFor(a => a.celular)</td>
+                </tr>      
+                <tr>
+                    <td>Email</td><td>@Html.TextBoxFor(a => a.email)</td>
+                </tr>
+                <tr>
+                    <td>Direccion</td><td>@Html.TextBoxFor(a => a.direccion)</td>
+                </tr>
+                <tr>
+                    <td>Ciudad</td><td>@Html.TextBoxFor(a => a.ciudad)</td>
+                </tr>
+                <tr>
+                    <td>Estado</td><td>@Html.TextBoxFor(a => a.estado)</td>
+                </tr>
+                <tr>
+                    <td>Pais</td><td>@Html.TextBoxFor(a => a.pais)</td>
+                </tr>
+                <tr>
+                    <td>Comentarios</td><td>@Html.TextBoxFor(a => a.comentarios)</td>
+                </tr>
+                <tr>
+                    <td>Cumpleaños</td><td>@Html.TextBoxFor(a => a.cumpleanos)</td>
+                </tr>	 
+                <tr>
+                       <td><input type="submit" value="enviar" /> </td>
+                </tr>                                                                        
+            }
+    </table>
+</fieldset>

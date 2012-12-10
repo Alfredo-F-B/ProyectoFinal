@@ -1,0 +1,136 @@
+﻿@model Hotel.Models.LocalPasswordModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Your Page Title Here :)</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+
+    <link href="stylesheets/layout.css" rel="stylesheet"/>
+    <script src="~/Scripts/jquery-1.7.2.min.js"> </script>
+    <script src="~/Scripts/jquery.slider.js"></script>
+    <script>
+        $(document).ready(function ($)
+        {
+            $(".slideshow").slider();
+        });
+    </script>
+
+</head>
+    
+
+
+
+
+    <body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<!-- Delete everything in this .container and get started on your own site! -->
+
+	<div class="container">
+        <div class="header">
+            <div class="izqder">
+                <div class="slideshow">
+                     <div class="mask">
+                        <img src="/images/portadaoficial.jpg">
+                         <ul class="items">
+                            <li>
+                                <div>
+                                     <h1>CONFIANZA</h1>
+                                 </div>
+                             </li>
+                             <li>
+                                 <div>
+                                     <h1>CONFORT</h1>
+                                 </div>
+                             </li>
+                             <li>
+                                 <div>
+                                     <h1>SEGURIDAD</h1>
+                                 </div>
+                             </li>
+                             <li>
+                                 <div>
+                                     <h1>COMODIDAD</h1>
+                                 </div>
+                             </li>                             
+                         </ul>
+                     </div>
+                </div>
+                <div class="der">
+                    <ul>
+                        <li class="a">
+                            @Html.ActionLink("Informacion", "Informacion", "Home")
+                        </li>
+                        <li class="b">
+                            @Html.ActionLink("Contactenos", "Contactenos", "Home")
+                        </li>
+                        <li class="c">
+                            @Html.ActionLink("Otros", "Otros", "Otros")
+                        </li>
+                        <li class="d">
+                            @Html.ActionLink("Habitacion", "Mostrar", "Habitacion")
+                        </li>
+                        <li class="e">
+                            @Html.ActionLink("Servicio", "Mostrar", "Servicio")
+                        </li>
+                        <li class="f">
+                            @Html.ActionLink("DashBoard", "Dash", "Dashboard")
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="cuerpo">
+            
+        </div>
+        <div class="fother">
+            <div class="comentarios">
+                <img src="/images/calavera.jpg">
+            </div>
+        </div>
+	</div><!-- container -->
+
+
+<!-- End Document
+================================================== -->
+</body>
+    </html>

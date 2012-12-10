@@ -1,0 +1,72 @@
+﻿@model Hotel.Models.habit
+
+@{
+    ViewBag.Title = "Mostrar";
+}
+
+
+<table class="estilo">
+    <tr >
+        <th colspan="11">
+            <b><h1>LISTA DE HABITACIONES</h1></b>
+        </th>
+    </tr>
+    <tr class="habitacion">
+            <th>Numero de Habitacion</th>
+            <th>Categoria</th>
+            <th>Piso</th>
+            <th>Precio</th>
+            <th>Fecha</th>
+            <th>Descripcion</th>
+            <th>Tipo de Pago</th>
+            <th>Tv Cable</th>
+            <th>baño</th>
+            <th>Ventilador</th>
+            <th>calefaccion</th>
+            <th>Estado</th>
+    </tr>
+    @foreach (var item in ViewBag.info) 
+    {
+        string L = "Libre";
+        string O = "Ocupado";
+        string M = "Mantenimiento";
+        <tr class="habitacion">
+            <td>@item.numero</td>
+            <td>@item.categoria</td>
+            <td>@item.piso</td>
+            <td>@item.precio</td>
+            <td>@item.fecha</td>
+            <td>@item.descripcion</td>
+            <td>@item.pago</td>
+            <td>@item.tvcable</td>
+            <td>@item.baño</td>
+            <td>@item.acondicionador</td>
+            <td>@item.calefaccion</td>
+            @if (L==@item.estado) 
+            {
+                <td class="Libre">@item.estado</td>
+                <td> @Html.ActionLink("Reservar", "RegistrarPer", "Persona")</td>    
+            }
+            else
+            {
+                if (O==@item.estado) 
+                {
+                    <td class="Ocupado">@item.estado</td>
+                }
+                else
+                {
+                    if (M==@item.estado) 
+                    {
+                        <td class="Mantenimiento">@item.estado</td>
+                    }
+                    else
+                    {
+                        <td class="Reservado">@item.estado</td>
+                    }
+                
+                }
+            
+            }
+        </tr>        
+    }    
+</table>

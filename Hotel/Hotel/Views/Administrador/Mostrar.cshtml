@@ -1,0 +1,46 @@
+﻿@model Hotel.Models.habit
+
+@{
+    ViewBag.Title = "Mostrar";
+}
+
+<table class="estilo">
+    <tr >
+        <th colspan="11">
+            <b><h1>LISTA DE ADMINITRADORES</h1></b>
+        </th>
+    </tr>
+    <tr class="habitacion">
+            <th>ID</th>
+            <th>ID Usuario</th>
+            <th>CI</th>
+            <th>Ap. Parterno</th>
+            <th>Ap. Materno</th>
+            <th>Nombres</th>
+            <th>Sexo</th>
+            <th>Fecha Nacimiento</th>
+            <th>Nacionalidad</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Celular</th>
+            <th>Fecha Registro</th>
+    </tr>
+    @foreach (var item in ViewBag.info) 
+    {
+        <tr class="habitacion">
+            <td>@item.id</td>
+            <td>@item.idUs</td>
+            <td>@item.ci</td>
+            <td>@item.apPaterno</td>
+            <td>@item.apMaterno</td>
+            <td>@item.nombres</td>
+            <td>@item.sexo</td>
+            <td>@item.fechaNacimiento</td>
+            <td>@item.nacionalidad</td>
+            <td>@item.direccion</td>
+            <td>@item.telefono</td>
+            <td>@item.celular</td>
+            <td>@item.fecharegistro</td>
+        </tr>        
+    }    
+</table>

@@ -1,0 +1,30 @@
+﻿@model Hotel.Models.habit
+
+@{
+    ViewBag.Title = "Mostrar";
+}
+
+<table class="estilo">
+    <tr >
+        <th colspan="11">
+            <b><h1>LISTA DE Servicios</h1></b>
+        </th>
+    </tr>
+    <tr class="habitacion">
+            <th>Numero de Servicio</th>
+            <th>Categoria</th>
+            <th>Precio</th>
+            <th>Descripcion</th>
+            <th>Fecha</th>
+    </tr>
+    @foreach (var item in ViewBag.info) 
+    {
+        <tr class="habitacion">
+            <td>@item.id</td>
+            <td>@item.categoria</td>
+            <td>@item.precio</td>
+            <td>@item.descripcion</td>
+            <td>@item.fecha</td>
+        </tr>        
+    }    
+</table>
